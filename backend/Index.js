@@ -32,16 +32,16 @@ app.use(cors())
 // })
 
 //api base url for setting productdata and stactic admin and user to mongo 
-app.use("/fst/prod", prodrouter)
+app.use("/api/fst/prod", prodrouter)
 // and gettingproduct data from mongo db
-app.use("/products", getProductroute)
+app.use("/api/products", getProductroute)
 //route for user signup update
-app.use("/user/auth", UserRoute)
+app.use("/api/user/auth", UserRoute)
 //route for user
-app.use("/user/oder", oderRoute)
+app.use("/api/user/oder", oderRoute)
 
 //route for search
-app.use("/products/mydata", SearchRoute)
+app.use("/api/products/mydata", SearchRoute)
 
 app.use((error, req, res, next) => {
     res.status(500).send({ errormessage: error.message })
