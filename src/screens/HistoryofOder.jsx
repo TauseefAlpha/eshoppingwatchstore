@@ -46,7 +46,7 @@ function HistoryofOder() {
         const fetchoderrecord = async () => {
             dispatch({ type: 'FETCH_REQUEST' })
             try {
-                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}user/oder/blongme`, {
+                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/user/oder/blongme`, {
 
                     headers: { authorization: `Alphat ${userdetail.token}` },
 

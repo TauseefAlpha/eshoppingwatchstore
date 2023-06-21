@@ -57,7 +57,7 @@ function Placeoder() {
 
         try {
             dispatch({ type: "ApiRequest" })
-            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}user/oder`, {
+            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/user/oder`, {
                 orderitems: cart.cartitems,
                 shippaddres: cart.shippaddres,
                 paymentMethod: cart.paymentMethod,

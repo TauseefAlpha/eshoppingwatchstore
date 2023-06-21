@@ -60,7 +60,7 @@ function Home() {
         const getdata = async () => {
             dispatch({ type: 'FETCH_REQUEST' })
             try {
-                const result = await axios.get(`${process.env.REACT_APP_API_URL}products`);
+                const result = await axios.get(`${process.env.REACT_APP_API_URL}/products`);
                 dispatch({ type: 'FETCH_SUCCESS', payload: result.data })
             }
             catch (err) {

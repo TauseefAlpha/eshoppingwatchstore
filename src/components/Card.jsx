@@ -22,7 +22,7 @@ function Card(props) {
     const addtocarthandler = async (item) => {
         const existItem = cart.cartitems.find((x) => x._id === item._id);
         const quantity = existItem ? existItem.quantity + 1 : 1;
-        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}products/${item._id}`)
+        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/products/${item._id}`)
         if (data.countInStock < quantity) {
             window.alert('Sorry. Product is out of stock');
             return;

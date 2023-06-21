@@ -36,7 +36,7 @@ function SignInForm() {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}user/auth/signin`, {
+            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/user/auth/signin`, {
                 email: logd.email,
                 password: logd.password
             })

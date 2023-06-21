@@ -43,7 +43,7 @@ function SignupForm() {
             return;
         }
         try {
-            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}user/auth/signup`, {
+            const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/user/auth/signup`, {
                 name: logd.name,
                 email: logd.email,
                 password: logd.password

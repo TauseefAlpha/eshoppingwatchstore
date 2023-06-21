@@ -59,7 +59,7 @@ function UpdateUserProfile() {
 
             console.log("tokrn", `Alphat ${userdetail.token}`)
             dispatch({ type: "updateuser" })
-            const { data } = await axios.put(`${process.env.REACT_APP_API_URL}user/auth/updateapi`, {
+            const { data } = await axios.put(`${process.env.REACT_APP_API_URL}/user/auth/updateapi`, {
                 name: updatedata.name,
                 email: updatedata.email,
                 password: password

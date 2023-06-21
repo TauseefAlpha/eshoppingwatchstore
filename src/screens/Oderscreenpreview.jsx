@@ -47,7 +47,7 @@ function Oderscreenpreview() {
             try {
 
                 dispatch({ type: 'FETCH_REQUEST' });
-                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}user/oder/${orderId}`, {
+                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/user/oder/${orderId}`, {
                     headers: { authorization: `Alphat ${userdetail.token}` },
 
                 });

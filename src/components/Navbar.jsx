@@ -47,7 +47,7 @@ function Navbar() {
     useEffect(() => {
         const fetchcategory = async () => {
             try {
-                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}products/catgory`)
+                const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/products/catgory`)
                 setCategories(data)
             } catch (error) {
                 toast(getError(error))
