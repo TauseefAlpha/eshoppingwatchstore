@@ -65,7 +65,7 @@ function Detailproductscreen() {
 
         const existItem = cart.cartitems.find((x) => x._id === product._id);
         const quantity = existItem ? existItem.quantity + 1 : 1;
-        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}products/${product._id}`);
+        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/products/${product._id}`);
         if (data.countInStock < quantity) {
             window.alert('Sorry. Product is out of stock');
             return;
@@ -90,7 +90,7 @@ function Detailproductscreen() {
         }}>
             <div className="col-md-5">
                 <img className='imglarge'
-                    style={{height: "80vh"}}
+                    style={{ height: "80vh" }}
                     src={product.image}
                     alt={product.name}
                 />
